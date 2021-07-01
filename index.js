@@ -12,8 +12,13 @@ const runningSum = function(nums){
   return nums.reduce((a,c)=> [...a,c + (a[a.length-1]||0)],[])
 }
 
+const kidsWithCandies = (candies, extra) => {
+  return candies.map((x) => x + extra >= Math.max(...candies))
+}
+
 nums = [2, 7, 11, 15]
 target = 9
 
+console.log(kidsWithCandies(nums, target))
 console.log(twoSum(nums, target))
 console.log(runningSum(nums))
