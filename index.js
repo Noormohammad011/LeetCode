@@ -8,7 +8,12 @@ var twoSum = function (nums, target) {
   }
 }
 
+const runningSum = function(nums){
+  return nums.reduce((a,c)=> [...a,c + (a[a.length-1]||0)],[])
+}
+
 nums = [2, 7, 11, 15]
 target = 9
 
 console.log(twoSum(nums, target))
+console.log(runningSum(nums))
